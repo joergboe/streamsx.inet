@@ -13,10 +13,10 @@
 		SPL::CodeGen::warnln(InetResource::INET_DEPRECATED_COF(@_), $model->getContext()->getSourceLocation());
 	}
 
-	my $ccContext = $model->getContext()->getOptionalContext("ConsistentRegion");
-	if (defined $ccContext) {
-		SPL::CodeGen::exitln(InetResource::INET_CONSISTENT_CHECK("FTPCommand"));
-	}
+	#my $ccContext = $model->getContext()->getOptionalContext("ConsistentRegion");
+	#if (defined $ccContext) {
+	#	SPL::CodeGen::exitln(InetResource::INET_CONSISTENT_CHECK("FTPCommand"));
+	#}
 
 	my $hasPasswordStream = $model->getNumberOfInputPorts() == 2;
 	my $hasErrorStream = $model->getNumberOfOutputPorts() == 2;
